@@ -1,0 +1,53 @@
+\documentclass{standalone}
+\standaloneconfig{border=2mm 2mm 2mm 2mm}
+
+
+%maths
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+%tikzpicture
+\usepackage{tikz}
+\usepackage{scalerel}
+\usepackage{pict2e}
+\usepackage{tkz-euclide}
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns,arrows.meta}
+\usetikzlibrary{shadows}
+\usetikzlibrary{external}
+
+%pgfplots
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{statistics}
+\usepgfplotslibrary{fillbetween}
+
+%colours
+\usepackage{xcolor}
+
+\usepackage{nicefrac}
+
+\begin{document}
+\begin{tikzpicture}[scale=1.5]
+
+
+\coordinate[label=below left:{$O$}] (O) at (0, 0);
+\coordinate[label=above left:{$A$}] (A) at (1.65, 2.5);
+\coordinate[label=above:{$F$}] (F) at (7.35, 2.5);
+\coordinate[label=below left:{$B$}] (B) at (1.65, 0.0);
+\coordinate[label=below right:{$D$}] (D) at (1.65, 0.6);
+\coordinate[label=below right:{$E$}] (E) at (4.4, 1.5);
+
+\draw (O)--(4, 6.05);
+\draw (A)--(9, 2.5);
+\draw (A)--(B);
+\draw (O)--(9,0);
+\draw (O)--(F);
+\draw (E)--(A);
+
+
+
+\end{tikzpicture}
+\end{document}

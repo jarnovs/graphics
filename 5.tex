@@ -1,0 +1,63 @@
+\documentclass{standalone}
+\standaloneconfig{border=2mm 2mm 2mm 2mm}
+
+
+%maths
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+%tikzpicture
+\usepackage{tikz}
+\usepackage{scalerel}
+\usepackage{pict2e}
+\usepackage{tkz-euclide}
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns,arrows.meta}
+\usetikzlibrary{shadows}
+\usetikzlibrary{external}
+
+%pgfplots
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{statistics}
+\usepgfplotslibrary{fillbetween}
+
+%colours
+\usepackage{xcolor}
+
+\usepackage{nicefrac}
+
+\begin{document}
+\begin{tikzpicture}[scale=1.5]
+
+\coordinate [label=below:{$O$}] (O) at (0, 0);
+\coordinate (A) at (1.43, 2);
+\coordinate (C) at (3.9308239, 2);
+\coordinate [label=above left:{$E$}] (E) at (5.9, 2);
+\coordinate (D) at (5.9, 3);
+
+\draw (O)--(4, 5.56);
+\draw (O)--(7.5, 0);
+\draw (A)--(7.5, 2);
+\draw (E)--(D) node [above=6pt] {$D$};
+\draw (O)--(6.5, 3.309);
+
+\draw[thick] (A) arc[start angle=60,end angle=-10,radius=2.3] node[right] {$B$};
+\draw[thick] (A) arc[start angle=60,end angle=70,radius=2.3] node[above right] {$A$};
+
+\draw[thick] (D) arc[start angle=27,end angle=40,radius=2.3];
+\draw[thick] (D) arc[start angle=27,end angle=-35,radius=2.3];
+
+\draw[thick] (C) arc[start angle=0,end angle=-6,radius=2.3];
+\draw[thick] (C) arc[start angle=0,end angle=6,radius=2.3];
+
+\draw[thick] (C) arc[start angle=45,end angle=50,radius=3] node[above left] {$C$};
+\draw[thick] (C) arc[start angle=45,end angle=40,radius=3];
+
+\draw [dashed] (E)--(5.9,1);
+\draw (O)--(E);
+
+\end{tikzpicture}
+\end{document}

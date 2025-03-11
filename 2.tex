@@ -1,0 +1,53 @@
+\documentclass{standalone}
+\standaloneconfig{border=2mm 2mm 2mm 2mm}
+
+
+%maths
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+%tikzpicture
+\usepackage{tikz}
+\usepackage{scalerel}
+\usepackage{pict2e}
+\usepackage{tkz-euclide}
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns,arrows.meta}
+\usetikzlibrary{shadows}
+\usetikzlibrary{external}
+
+%pgfplots
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{statistics}
+\usepgfplotslibrary{fillbetween}
+
+%colours
+\usepackage{xcolor}
+
+\usepackage{nicefrac}
+
+\begin{document}
+\begin{tikzpicture}[scale=1.5]
+
+\coordinate[label=below left:{$O$}] (O) at (0, 0);
+\coordinate[label=above:{$A$}] (A) at (0, 4.4);
+\coordinate[label=above:{$B$}] (B) at (2.2, 4.4);
+\coordinate[label=below right:{$D$}] (D) at (2.2, 0);
+\coordinate[label=above:{$E$}] (E) at (5.8, 4.4);
+\coordinate[label=below right:{$C$}] (C) at (2.2, 1.7);
+\coordinate[label=right:{$F$}] (F) at (5.8, 2.7);
+
+\draw[thick] (O)--(A);
+\draw[thick] (A)--(8, 4.4) node[above left] {$I_1$};
+\draw[thick] (B)--(2.2, -1) node[right] {$I_2$};;
+\draw[thick] (D)--(O);
+\draw[thick] (O)--(E);
+\draw[thick] (E)--(F);
+\draw[thick] (D)--(F);
+
+
+\end{tikzpicture}
+\end{document}
